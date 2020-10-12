@@ -8,23 +8,23 @@ public class LoginTrelloTest extends TestBase {
 
     @BeforeMethod
     public void ensurePreconditions() {
-        if (isAvatarPresent()) {
-            logout();
+        if (app.isAvatarPresent()) {
+            app.logout();
         }
     }
 
     @Test
     public void loginAtlassianAccPositiveTest() throws InterruptedException {
-        login("masuha02@mail.ru", "2871539@com");
-        Assert.assertTrue(isAvatarPresent());
+        app.login("masuha02@mail.ru", "2871539@com");
+        Assert.assertTrue(app.isAvatarPresent());
 
     }
 
     @Test
     public void negativeLoginAtlassianAccPositiveTest() throws InterruptedException {
-        login("masuha02@mail.ru", "2871539@cov");
-        Assert.assertTrue(isLogInErrorPresent());
-        Assert.assertFalse(isAvatarPresent());
+        app.login("masuha02@mail.ru", "2871539@cov");
+        Assert.assertTrue(app.isLogInErrorPresent());
+        Assert.assertFalse(app.isAvatarPresent());
 
     }
 }
