@@ -1,4 +1,6 @@
-package com.telRan.tests;
+package com.telRan.tests.tests;
+import com.telRan.tests.model.Board;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -6,15 +8,15 @@ public class BoardCreationTests extends TestBase{
 
     @Test
     public void boardCreation(){
-        app.boardsBefore = app.getBoardsCount();
-        app.clickOnPlusButton();
-        app.selectCreateNewBoard();
-        app.fillBoardForm("new qa board1", "public");
-        app.confirmBoardCreation();
-        app.returnOnHomePage(".mod-list-add-button");
-        app.boardsAfter = app.getBoardsCount();
-        System.out.println("was: " + app.boardsBefore + " now: " + app.boardsAfter);
-        Assert.assertEquals(app.boardsAfter, app.boardsBefore + 1);
+        int before = app.getBoard().getBoardsCount();
+        app.getHeader().clickOnPlusButton();
+        app.getHeader().selectCreateNewBoard();
+        app.getBoard().fillBoardForm(new Board().setBoardName("new qa board2").setTeam("public"));
+        app.getBoard().confirmBoardCreation();
+        app.getHeader().returnOnHomePage(By.cssSelector(".mod-list-add-button"));
+        int after = app.getBoard().getBoardsCount();
+        System.out.println("was: " + before + " now: " + after);
+        Assert.assertEquals(after, before+ 1);
     }
 }
 
