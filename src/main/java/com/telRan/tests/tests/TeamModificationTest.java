@@ -10,7 +10,7 @@ public class TeamModificationTest extends TestBase {
     public void modifyTeamTest(){
         app.getTeam().selectFirstTeam();
         app.getTeam().clickOnSettingsButton();
-        app.getTeam().renameTeam(new Team().setTeamName("12345"));
+        app.getTeam().renameTeam(new Team().setTeamName("ggggggg"));
         app.getHeader().returnOnHomePage(By.cssSelector(".tabbed-pane-header-content"));
     }
 }

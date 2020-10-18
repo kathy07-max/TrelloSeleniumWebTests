@@ -10,7 +10,7 @@ public class BoardDeleteTests extends TestBase{
     @Test
     public void deletionBoard(){
         int before = app.getBoard().getBoardsCount();
-        app.getBoard().selectBoard(new Board().setBoardName("test"));
+        app.getBoard().selectBoard(new Board().setBoardName("qa_24_4"));
         app.getHeader().enterInMenu();
         app.getHeader().selectMenuMore();
         app.getBoard().closeBoard();

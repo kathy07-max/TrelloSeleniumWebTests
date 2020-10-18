@@ -42,9 +42,9 @@ public class HeaderHelper extends HelperBase {
 
     }
     public void selectMenuMore() {
-//        if(isElementPresent(By.cssSelector(".board-menu-header-back-button"))){
-//            click(By.cssSelector(".board-menu-header-back-button"));
-//        }
+        if(isElementPresent(By.cssSelector(".board-menu-header-back-button"))){
+            click(By.cssSelector(".board-menu-header-back-button"));
+        }
         click(By.cssSelector(".js-open-more"));
     }
 

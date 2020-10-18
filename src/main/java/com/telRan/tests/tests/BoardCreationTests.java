@@ -11,7 +11,7 @@ public class BoardCreationTests extends TestBase{
         int before = app.getBoard().getBoardsCount();
         app.getHeader().clickOnPlusButton();
         app.getHeader().selectCreateNewBoard();
-        app.getBoard().fillBoardForm(new Board().setBoardName("new qa board2").setTeam("public"));
+        app.getBoard().fillBoardForm(new Board().setBoardName("qa board24").setTeam("public"));
         app.getBoard().confirmBoardCreation();
         app.getHeader().returnOnHomePage(By.cssSelector(".mod-list-add-button"));
         int after = app.getBoard().getBoardsCount();
