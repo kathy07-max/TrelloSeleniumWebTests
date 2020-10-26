@@ -17,7 +17,7 @@ public class BoardHelper extends HelperBase {
             click(By.xpath("//nav[@class='_1eiLh4-SJ3G7CY']//li[1]/button"));
         }
         click(By.cssSelector("._1Lkx3EjS3wCrs7"));
-        click(By.xpath("//*[@name='" + board.getTeam() + "']/../.."));
+        click(By.xpath("//*[@name='" + board.getBoardVisibility() + "']/../.."));
         if (isElementPresent(By.cssSelector(".X6LMWvod566P68"))) {
             click(By.cssSelector(".X6LMWvod566P68 button"));
         }

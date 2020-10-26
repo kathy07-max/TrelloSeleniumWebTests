@@ -54,4 +54,8 @@ public class HeaderHelper extends HelperBase {
         }
 
     }
+
+    public void openProfile() {
+        click(By.cssSelector("[data-test-id='header-member-menu-profile']"));
+    }
 }
